@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuickNotes API Client</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="api.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>QuickNotes API Client</h1>
+    <p>Load, create and delete notes through a REST API.</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Server notes</h2>
+      <button type="button" id="load-btn">Load notes</button>
+    </section>
+
+    <section>
+      <h2>Add a note</h2>
+      <form id="note-form" novalidate>
+        <div class="field">
+          <label for="title-input">Title (required, max 100 characters)</label>
+          <input type="text" id="title-input" name="title" autocomplete="off">
+        </div>
+        <div class="field">
+          <label for="body-input">Body (optional)</label>
+          <textarea id="body-input" name="body" rows="4"></textarea>
+        </div>
+        <button type="submit" id="submit-btn">Add note</button>
+      </form>
+    </section>
+
+    <p id="status" role="status"></p>
+
+    <section>
+      <h2>Notes</h2>
+      <ul id="notes-list"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 QuickNotes</p>
+  </footer>
+</body>
+</html>
